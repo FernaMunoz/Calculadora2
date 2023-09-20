@@ -41,7 +41,7 @@ public class Main {
                     num1 = scanner.nextDouble();
                     System.out.println("ingrese otro numero");
                     num2 = scanner.nextDouble();
-                    division(num1, num2);
+                    division (num1, num2);
                     break;
                 case 5:
                     System.out.println("ingrese un numero");
@@ -101,33 +101,39 @@ public class Main {
         System.out.println("Seleccione la opcion que desea realizar");
     }
 
-    public static void suma( double num1, double num2 ){
+    public static double suma( double num1, double num2 ){
 
-        System.out.println("la suma es:"+ (num1 + num2));
+       System.out.println("la suma es:"+ (num1 + num2));
+       return num1+num2;
     }
 
-    public static void resta( double num1, double num2){
+    public static double resta( double num1, double num2){
 
         System.out.println("la resta es:" + (num1 - num2));
+        return num1-num2;
     }
 
-    public static void multiplicacion(double num1, double num2){
+    public static double multiplicacion(double num1, double num2){
         System.out.println("la multiplicacion es:"+ (num1 * num2));
+        return num1*num2;
 
     }
 
-    public static void division(double num1, double num2){
-
-        System.out.println("la division es:"+ (num1 / num2));
+    public static double division(double num1, double num2){
+        if(num2 == 0){
+            throw new ArithmeticException("no se puede dividir por 0");
+        }
+        return num1 / num2;
     }
-    public static void numMayor(double num1, double num2) {
+    public static double numMayor(double num1, double num2) {
         double mayor = Math.max(num1, num2);
         System.out.println("el numero mayor es" + mayor);
+        return mayor;
     }
-    public static void numMenor(double num1, double num2) {
+    public static double numMenor(double num1, double num2) {
         double menor = Math.min(num1, num2);
         System.out.println("el numero menor es" + menor);
-
+        return menor;
         }
     public static void potencia(double base, double exponente){
           double potencia = Math.pow(base, exponente);
