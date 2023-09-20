@@ -1,19 +1,64 @@
 package org.example;
 
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+import java.util.Scanner;
+
+
 public class Main {
-    public static void main(String[] args) {
-        // Press Alt+Intro with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+    public static void main (String []args){
+        Scanner scanner = new Scanner(System.in);
+        int opcion;
 
-        // Press Mayús+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        while (true){
+            System.out.println("Bienvenido a la Calculadora");
+            System.out.println("Ingrese la opcion que desee: ");
+            System.out.println("1, Perimetro y area de un circulo ");
+            System.out.println("2, Area y volumen de una esfera");
+            System.out.println("3, Perimetro, area y volumen de un cuadrado/cubo");
+            System.out.println("4, Area y volumen de un cono");
 
-            // Press Mayús+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
+            opcion = scanner.nextInt();
+
+            switch (opcion) {
+                case 1:
+                    Calculadora.CirculoCalculadora();
+                    break;
+                case 2:
+                    Calculadora.EsferaCalculadora();
+                    break;
+                case 3:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    Calculadora.CuadradoCalculadora();
+                    break;
+                case 4:
+                    Calculadora.ConoCalculadora();
+                    break;
+                default:
+                    System.out.println("Opción no válida. Intente nuevamente.");
+
+            }
+
+
         }
+
     }
 }
+
+
