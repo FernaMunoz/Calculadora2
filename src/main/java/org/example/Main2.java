@@ -10,7 +10,7 @@ public class Main2 {
         System.out.println("Ax + By = C");
         System.out.println("Dx + Ey = F");
 
-        double A = 0, B = 0, C = 0, D = 0, E = 0, F = 0; // Inicialización con valores por defecto
+        double A = 0, B = 0, C = 0, D = 0, E = 0, F = 0;
 
         int opcion;
         do {
