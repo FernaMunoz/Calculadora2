@@ -135,13 +135,23 @@ public class Main {
         System.out.println("el numero menor es" + menor);
         return menor;
         }
-    public static void potencia(double base, double exponente){
+    public static double potencia(double base, double exponente){
           double potencia = Math.pow(base, exponente);
           System.out.println(base + " elevado a " + exponente + " es: " + potencia);
+          return potencia;
         }
-    public static void porcentaje(double numPor, double total){
-            double porcentaje = (numPor/total) * 100;
+    public static double porcentaje(double numPor, double total){
+        if(total == 0) {
+            throw new ArithmeticException("el numero total no puede ser cero");
+        } else if (total < 0) {
+            throw new ArithmeticException("el total no puede ser negativo");
+        } else if (numPor < 0) {
+            throw new ArithmeticException("la cantidad no puede ser negativo");
+        }
+
+        double porcentaje = (numPor/total) * 100;
             System.out.println("El " + numPor + " es el "+ porcentaje + "% de " + total );
+            return porcentaje;
     }
 
 }

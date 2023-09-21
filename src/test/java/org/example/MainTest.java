@@ -32,11 +32,11 @@ class MainTest {
 
     @Test
     void division() {
-       //assertEquals(3,Main.division(9,3));
+       assertEquals(3,Main.division(9,3));
        assertThrows(ArithmeticException.class, () -> {
             Main.division(5,0);
         });
-       //assertEquals(-4, Main.division(-4,0));
+       assertEquals(-4, Main.division(-4,0));
     }
 
     @Test
@@ -62,9 +62,30 @@ class MainTest {
 
     @Test
     void potencia() {
+        assertEquals(4, Main.potencia(2,2));
+        assertEquals(2,Main.potencia(2,1));
+        assertEquals(1, Main.potencia(3,0));
+        assertEquals(-27,Main.potencia(-3,3) );
+        assertEquals(9, Main.potencia(-3,2));
+        assertEquals(0, Main.potencia(0,3));
+        assertEquals(0.125, Main.potencia(2,-3));
+        assertEquals(-0.125, Main.potencia(-2,-3));
+        assertEquals(4, Main.potencia(16, 0.5));
     }
-
     @Test
     void porcentaje() {
+        assertEquals(25,Main.porcentaje(25,100) );
+        assertEquals(100,Main.porcentaje(70,70));
+        assertEquals(0, Main.porcentaje(0,50));
+        assertThrows(ArithmeticException.class, () -> {
+            Main.porcentaje(50,0);
+        });
+        assertThrows(ArithmeticException.class, () -> {
+            Main.porcentaje(-30,50);
+        });
+        assertThrows(ArithmeticException.class, () -> {
+            Main.porcentaje(50,-100);
+        });
+
     }
 }
