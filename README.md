@@ -15,3 +15,5 @@ primero creare un método para pedir los datos solicitados, en el método intera
 despues creare un metodo que con el metodo de cramer nos dara las soluciones de x e y  
 por ultimo creare un menu
 
+pruebas unitarias
+tengo problemas con mi intellij y el Junit, no logre realizar las pruebas unitarias que me correspondian a tiempo
