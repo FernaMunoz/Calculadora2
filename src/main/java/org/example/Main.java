@@ -1,19 +1,56 @@
 package org.example;
+import java.util.Scanner;
+import java.lang.Math;
 
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Intro with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        Scanner form = new Scanner(System.in);
 
-        // Press Mayús+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        System.out.println("Fórmula Cuadrática: Ax2 + Bx + C = 0");
 
-            // Press Mayús+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
+        double a, b, c;
+
+        System.out.println("Escriba el numero A");
+        a = form.nextDouble();
+
+        System.out.println("Escriba el numero B");
+        b = form.nextDouble();
+
+        System.out.println("Escriba el numero C?");
+        c = form.nextDouble();
+
+        EcuacionCuadratica ecuacion = new EcuacionCuadratica(a, b, c);
+        ecuacion.calcularSoluciones();
+        ecuacion.calcularDeterminate();
+    }
+}
+
+class EcuacionCuadratica {
+    double a, b, c;
+
+    public EcuacionCuadratica(double a, double b, double c) {
+        this.a = a;
+        this.b = b;
+        this.c = c;
+    }
+
+    public void calcularSoluciones() {
+        double potencia;
+        potencia = Math.pow(b, 2) - (4 * a * c);
+
+        double x1 = (-b - Math.sqrt(potencia)) / (2 * a);
+        double x2 = (-b + Math.sqrt(potencia)) / (2 * a);
+
+        System.out.println("Las soluciones son:");
+        System.out.println("X1 = " + x1);
+        System.out.println("X2 = " + x2);
+    }
+    public void calcularDeterminate(){
+        double determinate = Math.pow(b, b) - (4 * a * c);
+        if (determinate> 0.0){
+
         }
+
     }
 }
