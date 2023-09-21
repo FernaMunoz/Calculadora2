@@ -5,6 +5,9 @@ import java.lang.Math;
 
 public class Main {
     public static void main(String[] args) {
+
+    }
+    public static void datos{
         Scanner form = new Scanner(System.in);
 
         System.out.println("Fórmula Cuadrática: Ax2 + Bx + C = 0");
