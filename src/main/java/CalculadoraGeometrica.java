@@ -46,8 +46,12 @@ public class CalculadoraGeometrica {
         }
     }
     public static void CalculadoraCuadrado(Scanner scanner){
+
         System.out.print("Ingrese la longitud del lado1 del cuadrado: ");
         double lado = scanner.nextDouble();
+        if (lado < 0) {
+            throw new IllegalArgumentException("El lado no puede ser negativo");
+        }
 
         double perimetroCuadrado = 4 * lado;
         double areaCuadrado = lado * lado;
@@ -58,9 +62,14 @@ public class CalculadoraGeometrica {
     public static void CalculadoraRectangulo(Scanner scanner){
         System.out.print("Ingrese el ancho del rectangulo");
         double ancho = scanner.nextDouble();
+        if (ancho < 0) {
+            throw new IllegalArgumentException("El ancho no puede ser negativo");
+        }
         System.out.print("Ingrese el largo del rectangulo");
         double largo = scanner.nextDouble();
-
+        if (largo < 0) {
+            throw new IllegalArgumentException("El radio no puede ser negativo");
+        }
         double perimetroRec = 2 * (largo + ancho);
         double areaRec = largo * ancho;
 
@@ -71,6 +80,9 @@ public class CalculadoraGeometrica {
     public static void CirculoCalculadora(Scanner scanner){
         System.out.print("Ingrese el radio: ");
         double radio = scanner.nextDouble();
+        if (radio < 0) {
+            throw new IllegalArgumentException("El radio no puede ser negativo");
+        }
 
         double perimetrocirculo = 2 * Math.PI * radio;
         double areacirculo = Math.pow(radio, 2.0) * Math.PI;
@@ -82,6 +94,10 @@ public class CalculadoraGeometrica {
         System.out.print("Ingrese el radio: ");
         double radio = scanner.nextDouble();
 
+        if (radio < 0) {
+            throw new IllegalArgumentException("El radio no puede ser negativo");
+        }
+
         double areasuperficie = 4 * Math.PI * Math.pow(radio, 2.0);
         double volumenesfera = (4 * (Math.PI) * (Math.pow(radio, 3.0))) / 3.0;
 
@@ -91,10 +107,12 @@ public class CalculadoraGeometrica {
     public static void CuboCalculadora(Scanner scanner){
         System.out.print("Ingrese la longitud de un lado del cubo: ");
         double lado = scanner.nextDouble();
-
+        if (lado < 0) {
+            throw new IllegalArgumentException("El radio no puede ser negativo");
+        }
         double perimetroCubo = 12 * lado;
-        double areaCubo = 6 * lado * lado;
-        double volumenCubo = lado * lado * lado;
+        double areaCubo = 6 * Math.pow(lado, 2.0);
+        double volumenCubo = Math.pow(lado, 3.0);
 
         System.out.println("Perímetro del cubo: " + perimetroCubo);
         System.out.println("Área del cubo: " + areaCubo);
@@ -103,10 +121,19 @@ public class CalculadoraGeometrica {
     public static void ConoCalculadora(Scanner scanner){
         System.out.println("Ingrese el radio: ");
         double radio = scanner.nextDouble();
+        if (radio < 0) {
+            throw new IllegalArgumentException("El radio no puede ser negativo");
+        }
         System.out.println("Ingrese la altura: ");
         double altura = scanner.nextDouble();
+        if (altura < 0) {
+            throw new IllegalArgumentException("La altura no puede ser negativa");
+        }
         System.out.println("Ingrese la altura inclinada/hipotenusa");
         double althipotenusa = scanner.nextDouble();
+        if (althipotenusa < 0) {
+            throw new IllegalArgumentException("La altura inclinada no puede ser negativa");
+        }
 
         double areaCono = Math.PI * radio * (radio + althipotenusa);
         double volumenCono = (altura * (Math.PI) * (Math.pow(radio, 2.0))) / 3.0;
