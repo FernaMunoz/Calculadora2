@@ -12,3 +12,14 @@ Ax + By = C
 Dx + Ey = F
 
 casos de prueba
+1. Sistema con solución única
+Este caso prueba un sistema que tiene una única solución, lo que debería resultar en una solución válida.
+Coeficientes: A = 2, B = 3, C = 8, D = 1, E = -2, F = 3.
+Solución esperada: x = 2, y = 1.
+
+2. Sistema sin solución única
+
+Justificación: Este caso prueba un sistema que no tiene una solución única (determinante igual a 0), lo que debería resultar en un mensaje de sistema sin solución.
+Coeficientes: A = 1, B = 2, C = 3, D = 2, E = 4, F = 6.
+Resultado esperado: "El sistema no tiene una solución única."
+
