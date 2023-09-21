@@ -20,7 +20,7 @@ Ax + By = C
 Dx + Ey = F
 Encargada: Valentina 
 5- calcular la ecuación de una recta de la forma: Y = mX + b, dados 2 puntos de la recta (x1,y1) (x2,y2) 
-Encargada: Valentina 
+Encargada: Maria Jose 
 Los codigos estan el las ramas especificas de cada integrante
 
 2. Responda las siguientes preguntas 
