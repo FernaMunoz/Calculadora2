@@ -10,7 +10,7 @@ Deben definir que hará c/u y como coordinan el trabajo en un único repositorio
 *Calcular las 4 operaciones aritméticas básicas 
 Encargada: Maria Jose
 *Calcular las soluciones x1 y x2 de una ecuación cuadrática 
-Encargada: Maria Jose
+Encargada: Valentina
 
 *Calcular perímetros, áreas y volúmenes de un cuadrado, rectángulo, círculo, esfera, cubo y cono.
 Encargada: Fernanda 
@@ -28,7 +28,7 @@ Los codigos estan el las ramas especificas de cada integrante
   R: Debera entregar un mensaje de excepcion, debidonque la division por cero mostrara error.
 
 - ¿Qué pasa si base y exponente de la potencia son CERO?
-
+Tambien va a haber una excepcion
 - ¿Qué pasa si se intenta ingresar una variable de entrada no numérica?
   Al ser una excepcion se mostrara un mensaje de que nopuedes ingresar una variable no numerica
   //en cada commit se mostrara un comentario que se realizaron excepciones y pruebas unitarias.
